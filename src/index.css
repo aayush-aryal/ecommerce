@@ -1,19 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 * {
   margin: 0;
 }
 
+header {
+  padding: 10px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.2);
+  background: #1d1d1d;
+  color: white;
+}
 header nav {
   display: flex;
   gap: 16px;
   justify-content: end;
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
+  align-items: center;
 }
 
 header nav h1 {
   margin-right: auto;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 0.8rem;
+}
+
+.cart-container {
+  position: relative;
+  display: flex;
+  padding: 10px;
+}
+.shopping-cart {
+  width: 20px;
+  height: 20px;
+}
+
+.cart-items {
+  position: absolute;
+  background: #dc2626;
+  border-radius: 50%;
+  height: 10px;
+  bottom: 0;
+  right: 0;
+  padding: 3px 5px;
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 700;
 }
