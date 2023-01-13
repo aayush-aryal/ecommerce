@@ -22,6 +22,9 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
+      <footer>
+        <p>Copyright 2023@Sneaka Sneaker. All rights not reserved</p>
+      </footer>
     </div>
   );
 }
