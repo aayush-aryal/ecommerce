@@ -10,7 +10,11 @@ export default function RootLayout() {
           <NavLink to="/checkout">
             <div className="cart-container">
               <div className="cart-items">2</div>
-              <img src={ShoppingCart} className="shopping-cart" />
+              <img
+                src={ShoppingCart}
+                className="shopping-cart"
+                alt="shopping cart"
+              />
             </div>
           </NavLink>
           <NavLink to="/">Home</NavLink>
