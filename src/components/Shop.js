@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Shop(props) {
   return (
     <div className="shop">
@@ -8,7 +10,9 @@ export default function Shop(props) {
               <img src={sneaker.src} alt="sneaker.name" />
               <h2>{sneaker.name}</h2>
               <p>${sneaker.price}</p>
-              <button>Add to Cart</button>
+              <Link to={`/${sneaker.id}`}>
+                <button>View Details</button>
+              </Link>
             </div>
           );
         })}
