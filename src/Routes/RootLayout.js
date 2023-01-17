@@ -1,5 +1,4 @@
 import { Outlet, NavLink } from "react-router-dom";
-import ShoppingCart from "../components/shopping-cart.svg";
 export default function RootLayout() {
   return (
     <div className="root-layout">
@@ -11,7 +10,7 @@ export default function RootLayout() {
             <div className="cart-container">
               <div className="cart-items">2</div>
               <img
-                src={ShoppingCart}
+                src="./icons/shopping-cart.svg"
                 className="shopping-cart"
                 alt="shopping cart"
               />

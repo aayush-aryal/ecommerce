@@ -75,7 +75,8 @@ header nav a:last-child {
   position: absolute;
   background: #dc2626;
   border-radius: 50%;
-  height: 10px;
+  height: auto;
+  width: auto;
   bottom: 0;
   right: 0;
   padding: 3px 5px;
@@ -152,6 +153,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .parent-container {
@@ -316,4 +318,81 @@ footer {
   height: 30px;
   max-width: 100%;
   max-height: 100%;
+}
+
+/* shop item */
+.shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+  justify-content: center;
+  align-content: center;
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .shop-container {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+.shop-item {
+  flex: 1 0 calc(50% - 2%); /*this will make the shop-item to take the full width and will adjust the width to 50% of the parent and will adjust the gap of 2% */
+  margin: 0.5%;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.2);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .shop-item {
+    flex: 1 0 100%;
+  }
+}
+
+.shop-item {
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .shop-item {
+    width: 90%;
+  }
+}
+
+.shop-item img {
+  width: 300px;
+}
+
+.shop-item h2 {
+  font-size: 1.2rem;
+}
+
+.shop-item p {
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+/* shop icons */
+
+.shop-item button img {
+  width: 30px;
+}
+
+.shop-item button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: white;
+  border-radius: 2px;
+  padding: 6px 10px;
 }
