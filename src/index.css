@@ -209,6 +209,8 @@ footer {
   width: 25%;
   text-align: center;
   margin: 20px;
+  box-shadow: 0 2px 3px rgb(0 0 0 / 0.2);
+  padding: 10px;
 }
 
 .single-shoe img {
@@ -395,4 +397,9 @@ footer {
   color: white;
   border-radius: 2px;
   padding: 6px 10px;
+  text-decoration: none;
+}
+
+.shop-item a {
+  text-decoration: none;
 }
