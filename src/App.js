@@ -15,22 +15,26 @@ import shoe3 from "./assets/shoes/shoe3.png";
 import shoe4 from "./assets/shoes/shoe4.png";
 import shoe5 from "./assets/shoes/shoe5.png";
 import shoe6 from "./assets/shoes/shoe6.png";
+import ShopItem from "./components/ShopItem";
+import uuid from "react-uuid";
 
 const sneakersArray = [
   {
     src: shoe1,
     name: "Nike Kyrie 5 Squidward",
     price: 300,
+    id: uuid(),
   },
-  { src: shoe2, name: "Nike Lebron 18", price: 200 },
-  { src: shoe3, name: "Nike KD 14", price: 150 },
-  { src: shoe4, name: "Nike Pg 2.5", price: 160 },
+  { src: shoe2, name: "Nike Lebron 18", price: 200, id: uuid() },
+  { src: shoe3, name: "Nike KD 14", price: 150, id: uuid() },
+  { src: shoe4, name: "Nike Pg 2.5", price: 160, id: uuid() },
   {
     src: shoe5,
     name: "Nike Zoom Freak 3",
     price: 150,
+    id: uuid(),
   },
-  { src: shoe6, name: "Nike Kyrie 8 ", price: 70 },
+  { src: shoe6, name: "Nike Kyrie 8 ", price: 70, id: uuid() },
 ];
 
 function App() {
@@ -38,10 +42,16 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Main sneakersArray={sneakersArray} />} />
-        <Route path="/shop" element={<Shop sneakersArray={sneakersArray} />}>
-          <Route path=":id" />
-        </Route>
         <Route path="/checkout" element={<Checkout />} />
+
+        <Route
+          path="/shop"
+          element={<Shop sneakersArray={sneakersArray} />}
+        ></Route>
+        <Route
+          path=":id"
+          element={<ShopItem sneakersArray={sneakersArray} />}
+        />
       </Route>
     )
   );
