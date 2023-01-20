@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-export default function RootLayout() {
+export default function RootLayout({ cart }) {
   return (
     <div className="root-layout">
       <header>
@@ -8,7 +8,7 @@ export default function RootLayout() {
           <NavLink to="/shop">Shop</NavLink>
           <NavLink to="/checkout">
             <div className="cart-container">
-              <div className="cart-items">2</div>
+              <div className="cart-items">{cart.length}</div>
               <img
                 src="./icons/shopping-cart.svg"
                 className="shopping-cart"

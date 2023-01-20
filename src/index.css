@@ -403,3 +403,116 @@ footer {
 .shop-item a {
   text-decoration: none;
 }
+
+/* shopitem styles */
+.shopitem-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  background: white;
+  height: 60%;
+  width: 60%;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.shopitem-sneaker {
+  width: 400px;
+}
+
+.shopitem-info {
+  align-items: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+div.shopitem-info p:last-of-type {
+  margin-top: 20px;
+  color: #666666;
+}
+
+.shopitem-info p:first-of-type {
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.shopitem-info button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  color: white;
+  border-radius: 2px;
+  padding: 6px 10px;
+  text-decoration: none;
+  margin-top: 40px;
+}
+
+.added {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #1d1d1d;
+  color: white;
+  top: 0;
+  left: 50;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-100%) scale(1.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* checkout */
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  gap: 50px;
+}
+
+.cart-img {
+  width: 400px;
+}
+
+.total {
+  text-align: center;
+}
+
+.total button {
+  width: 300px;
+  padding: 10px 20px;
+  background: #000;
+  color: white;
+  border-radius: 2px;
+  padding: 6px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: exo, sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  scale: 1.1;
+}
+
+.checkout-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-container {
+  flex-wrap: wrap;
+}

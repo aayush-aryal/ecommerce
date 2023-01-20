@@ -18,8 +18,8 @@ export default function Main(props) {
         <p>Star Player Edition</p>
         <div className="shoe-container">
           {props.sneakersArray.map((shoe) => (
-            <div className="single-shoe">
-              <Link to="/shop">
+            <div className="single-shoe" key={shoe.id}>
+              <Link to={`/shop/${shoe.id}`}>
                 <img
                   src={shoe.src}
                   key={Math.random()}
