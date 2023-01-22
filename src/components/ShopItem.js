@@ -16,17 +16,13 @@ export default function ShopItem({
   }, [id, sneakersArray]);
 
   function handleClick() {
-    if (sneaker) {
-      addtoCart(sneaker);
-    }
+    addtoCart(sneaker);
     setAdded(true);
     setTimeout(() => {
       setAdded(false);
     }, 700);
   }
-  function handleRemove() {
-    removeFromCart(sneaker);
-  }
+
   return (
     <div className="shopitem-container">
       {sneaker && (
@@ -36,11 +32,18 @@ export default function ShopItem({
             <h2>{sneaker.name}</h2>
             <p>${sneaker.price}</p>
             <p>{sneaker.description}</p>
-            {!cart.includes(sneaker) && (
+            {!cart.filter((item) => item.id === sneaker.id).length ? (
               <button onClick={handleClick}>Add to Cart</button>
-            )}
-            {cart.includes(sneaker) && (
-              <button onClick={handleRemove}>Remove from Cart</button>
+            ) : (
+              <button
+                onClick={() =>
+                  removeFromCart(
+                    cart.filter((item) => item.id === sneaker.id)[0]
+                  )
+                }
+              >
+                Remove From Cart
+              </button>
             )}
           </div>
           {added && (
